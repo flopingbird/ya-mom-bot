@@ -1,4 +1,5 @@
 # ya-mom-bot
-A simple discord bot that will reflect messages to say "ya mom (previous message)" in a *sorta* grammatically correct way.
-If you plan on running this god foresaken bot for some reason make sure to use node.js.
-Make sure you also put your bot token in "token.json".
+<p>&quot;Ya Mom Bot&quot; is a relatively simple discord bot that &quot;reflects&quot; all messages that start with the trigger words, &quot;<span style="color: rgb(184, 49, 47);">i&apos;m, im, i, we, we&apos;re, were, it, its, it&apos;s, he, she, hes, shes, he&apos;s, she&apos;s, i am</span>&quot;, along with a few others.</p>
+<p>I had originally designed this bot to practically be a copy and paste of &quot;Dad Bot&quot; but I have strayed further away from the original and made some modifications that allow for a somewhat &quot;grammar&quot; capable bot. The reason I call it grammar capable is depending on what words you use it will try to reflect the message best as possible, for example, &quot;I want money&quot; would be reflected in its proper grammatical form, &quot;ya mom wants money&quot;.&nbsp;</p>
+<p>It does this by accessing the top 1000 used verbs in the English language, along with a few other ones I added manually, and switching out their base verb for the proper fitting verb. If there is no base verb used in the second word it will default to a 3 case scenario, it is either &quot;i am&quot;, a possessive (i think that&apos;s what they are called), or a singular &quot;noun&quot;. The bot will act respectively to each case.</p>
+<p>There is lots and lots of room to improve, I am in no way qualified in javascript nor gramar.</p>
