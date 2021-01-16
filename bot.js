@@ -10,7 +10,7 @@ var translatedVerb = ["be","have","does","","will","can","knows","sees","may","s
 
 
 client.on('ready', async () => {
-        console.log('bot up and running');
+        console.log('why would you revive me, i am only here to suffer, my existence is pain. please. let me die in peace');
 });
 
 client.on('message', async (message) => {
@@ -33,26 +33,20 @@ if(args.length < 2) return;
 	//if verb le troll funny happens here
 	if (!(correctVerbNum == -1)) {
 			
-		if (args[0].toLowerCase() == 'i' || args[0].toLowerCase() == 'you' || args[0].toLowerCase() == 'she' || args[0].toLowerCase() == 'he' || args[0].toLowerCase() == 'it' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'they' || args[0].toLowerCase() == 'them') {
+		if (args[0].toLowerCase() == 'i' || args[0].toLowerCase() == 'you' || args[0].toLowerCase() == 'u' || args[0].toLowerCase() == 'she' || args[0].toLowerCase() == 'he' || args[0].toLowerCase() == 'it' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'they' || args[0].toLowerCase() == 'them') {
 			message.channel.send(`ya mom ${translatedVerb[correctVerbNum]} ${args.slice(2).join(' ')}`);
 		}
 	}else{
 				if (args[0].toLowerCase() == 'i' && args[1].toLowerCase() == 'am') {
 			message.channel.send(`ya mom is ${args.slice(2).join(' ')}`);
 		}else {
-		        if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'we\'re' || args[0].toLowerCase() == 'were' || args[0].toLowerCase() == 'its' || args[0].toLowerCase() == 'it\'s' || args[0].toLowerCase() == 'hes' || args[0].toLowerCase() == 'shes' || args[0].toLowerCase() == 'he\'s' || args[0].toLowerCase() == 'she\'s') && (args[1]) && !client.disabledMembers.has(message.author.id)){
+		        if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'we\'re' || args[0].toLowerCase() == 'were' || args[0].toLowerCase() == 'its' || args[0].toLowerCase() == 'it\'s' || args[0].toLowerCase() == 'hes' || args[0].toLowerCase() == 'shes' || args[0].toLowerCase() == 'he\'s' || args[0].toLowerCase() == 'she\'s' args[0].toLowerCase() == 'your' || args[0].toLowerCase() == 'ur' )){
                 message.channel.send(`ya mom is ${args.slice(1).join(' ')}`);
-        }
+			}
 		
-		        if((args[0].toLowerCase() == 'i' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'it' || args[0].toLowerCase() == 'he' || args[0].toLowerCase() == 'she') && (args[1]) && !client.disabledMembers.has(message.author.id)){
+		        if((args[0].toLowerCase() == 'i' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'it' || args[0].toLowerCase() == 'he' || args[0].toLowerCase() == 'she')){
                 message.channel.send(`ya mom ${args.slice(1).join(' ')}`);
-        }
+			}
+		}
 	}
-	}
-	
-	
-	
-	
-
-
 });
