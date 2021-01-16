@@ -10,7 +10,8 @@ var translatedVerb = ["be","have","does","","will","can","knows","sees","may","s
 
 
 client.on('ready', async () => {
-        console.log('why would you revive me, i am only here to suffer, my existence is pain. please. let me die in peace');
+	console.log('why would you revive me, i am only here to suffer, my existence is pain. please. let me die in peace');
+	//console.log(client.guilds);
 });
 
 client.on('message', async (message) => {
