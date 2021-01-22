@@ -5,8 +5,8 @@ const token = require('./token.json');
 const verbs = require('./verbs.json');
 const verbsTranslated = require('./verbsTranslated.json');
 client.login(token.token);
-var baseVerbs = verbs.baseVerbs;
-var translatedVerb = verbsTranslated.translatedVerb;
+const baseVerbs = verbs.baseVerbs;
+const translatedVerb = verbsTranslated.translatedVerb;
 
 client.on('ready', async () => {
 	console.log('why would you revive me, i am only here to suffer, my existence is pain. please. let me die in peace');
@@ -37,16 +37,17 @@ if(args.length < 2) return;
 			message.channel.send(`ya mom ${translatedVerb[correctVerbNum]} ${args.slice(2).join(' ')}`);
 		}
 	}else{
-				if (args[0].toLowerCase() == 'i' && args[1].toLowerCase() == 'am') {
-			message.channel.send(`ya mom is ${args.slice(2).join(' ')}`);
-		}else {
-		        if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'we\'re' || args[0].toLowerCase() == 'were' || args[0].toLowerCase() == 'its' || args[0].toLowerCase() == 'it\'s' || args[0].toLowerCase() == 'hes' || args[0].toLowerCase() == 'shes' || args[0].toLowerCase() == 'he\'s' || args[0].toLowerCase() == 'she\'s' || args[0].toLowerCase() == 'your' || args[0].toLowerCase() == 'ur' )){
-                message.channel.send(`ya mom is ${args.slice(1).join(' ')}`);
+		if (args[0].toLowerCase() == 'i' && args[1].toLowerCase() == 'am') {
+	    message.channel.send(`ya mom is ${args.slice(2).join(' ')}`);
+		    }
+	        if (args[0].toLowerCase() == 'ya' && args[1].toLowerCase() == 'mom' && !message.author.bot) {
+	    message.channel.send('hey kid thats my job');
 			}
-		
-		        if((args[0].toLowerCase() == 'i' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'it' || args[0].toLowerCase() == 'he' || args[0].toLowerCase() == 'she')){
-                message.channel.send(`ya mom ${args.slice(1).join(' ')}`);
+	    	if ((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'we\'re' || args[0].toLowerCase() == 'were' || args[0].toLowerCase() == 'its' || args[0].toLowerCase() == 'it\'s' || args[0].toLowerCase() == 'hes' || args[0].toLowerCase() == 'shes' || args[0].toLowerCase() == 'he\'s' || args[0].toLowerCase() == 'she\'s' || args[0].toLowerCase() == 'your' || args[0].toLowerCase() == 'ur' )){
+            message.channel.send(`ya mom is ${args.slice(1).join(' ')}`);
+			}
+		if ((args[0].toLowerCase() == 'i' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'it' || args[0].toLowerCase() == 'he' || args[0].toLowerCase() == 'she')){
+            message.channel.send(`ya mom ${args.slice(1).join(' ')}`);
 			}
 		}
-	}
 });
