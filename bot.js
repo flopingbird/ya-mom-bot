@@ -9,58 +9,63 @@ client.login(token.token);
 const baseVerbs = verbs.baseVerbs;
 const translatedVerb = verbsTranslated.translatedVerb;
 var usersCount;
-
-//ok then it does database stuff which i legit have a childs understanding of
-
+var caseVerb = ['i', 'you', 'u', 'she', 'he', 'it', 'we', 'they', 'them'];
+var caseYaMomIs = ['i\'m', 'im', 'we\'re', 'were', 'its', 'it\'s', 'hes', 'shes', 'he\'s', 'she\'s', 'your', 'ur', 'youre', 'you\'re'];
+var caseYaMom = ['i', 'it', 'he', 'she'];
 
 client.on('ready', async () => {
 	console.log('bot on or somethign like that');
-	console.log(client.guilds);
 	//status funny
 	refreshStatus();
 	console.log(`doin ${client.guilds.cache.array().length} moms with ${usersCount} people watching!`);
 });
 
 client.on('message', async (message) => {
-	if(!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
-	var verbNum; 
-	var correctVerbNum = -1;
+	if (!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
 	const args = message.content.trim().split(/ +/g);
-	if(args.length < 2) return;
-	
-	//if verb needs correcting search================================================
-	for (verbNum = 0; verbNum < baseVerbs.length; verbNum++) {
-		if (args[1].toLowerCase() == baseVerbs[verbNum]) {
-			correctVerbNum = verbNum;
-		}
-		//repeat loop until found match 
-	}
-	//================================================================================
-	
-	
-	//if verb le troll funny happens here
-	if (!(correctVerbNum == -1)) {
-			
-		if (args[0].toLowerCase() == 'i' || args[0].toLowerCase() == 'you' || args[0].toLowerCase() == 'u' || args[0].toLowerCase() == 'she' || args[0].toLowerCase() == 'he' || args[0].toLowerCase() == 'it' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'they' || args[0].toLowerCase() == 'them') {
+	//check if they contain trigger word so it doesnt waste time processing looking for verb if it doesnt even matter (hopefully i explained that well)
+	if (!caseYaMomIs.includes(args[0].toLowerCase())) {
+		if (!caseYaMom.includes(args[0].toLowerCase())) {
+			if (!caseVerb.includes(args[0].toLowerCase())) {
+				if (!args[0] == 'ya') return; }}}//i took like 5 minutes to write this im gonna have an anrysm that took longer than it shoudlve
+	if (args.length < 2) return; //if message 1 word dont do it or cases dont fit idk man 
+	var verbNum;
+	var correctVerbNum = -1;
+	findVerb(args[1]);
+	console.log(correctVerbNum);
+	//WHERE THE MAGIC HAPPENS (choses what case to use) ======================================================================================================================================
+	if (!(correctVerbNum == -1)) { //checks to see if it needs to use gramar 
+		if (caseVerb.includes(args[0].toLowerCase())) {
+			console.log('ok this isnt funny anoymore');
 			message.channel.send(`ya mom ${translatedVerb[correctVerbNum]} ${args.slice(2).join(' ')}`);
 		}
-	}else{
-				if (args[0].toLowerCase() == 'i' && args[1].toLowerCase() == 'am') {
-			message.channel.send(`ya mom is ${args.slice(2).join(' ')}`);
-		    }
-				if (args[0].toLowerCase() == 'ya' && args[1].includes('mom') && !message.author.bot) {
-			message.channel.send('hey kid thats my job');
-			}
-				if ((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'we\'re' || args[0].toLowerCase() == 'were' || args[0].toLowerCase() == 'its' || args[0].toLowerCase() == 'it\'s' || args[0].toLowerCase() == 'hes' || args[0].toLowerCase() == 'shes' || args[0].toLowerCase() == 'he\'s' || args[0].toLowerCase() == 'she\'s' || args[0].toLowerCase() == 'your' || args[0].toLowerCase() == 'ur' )){
-            message.channel.send(`ya mom is ${args.slice(1).join(' ')}`);
-			refreshStatus(); //only here because I dont want it constantly being refreshed nor do i want to set a timer.
-			}
-				if ((args[0].toLowerCase() == 'i' || args[0].toLowerCase() == 'we' || args[0].toLowerCase() == 'it' || args[0].toLowerCase() == 'he' || args[0].toLowerCase() == 'she')){
-            message.channel.send(`ya mom ${args.slice(1).join(' ')}`);
-			}
-		}
-});
+	} else {
+	if (args[0].toLowerCase() == 'i' && args[1].toLowerCase() == 'am') {
+		message.channel.send(`ya mom is ${args.slice(2).join(' ')}`);
+	}
+	if (args[0].toLowerCase() == 'ya' && args[1].includes('mom') && !message.author.bot) {
+		message.channel.send('hey kid thats my job');
+	}
+	if (caseYaMomIs.includes(args[0].toLowerCase())){
+		message.channel.send(`ya mom is ${args.slice(1).join(' ')}`);
+		refreshStatus(); //only here because I dont want it constantly being refreshed nor do i want to set a timer.
+	}
+	if (caseYaMom.includes(args[0].toLowerCase())){
+		message.channel.send(`ya mom ${args.slice(1).join(' ')}`);
+	}
+}//===========================================================================================================================================================================================
 
+
+	//functions ==========================================================================================================================
+	function findVerb(verb) {
+		for (verbNum = 0; verbNum < baseVerbs.length; verbNum++) {
+			if (verb.toLowerCase() == baseVerbs[verbNum]) {
+				correctVerbNum = verbNum;
+				return;
+			}//repeat loop until found match 
+		}
+    }//===================================================================================================================================
+});
 
 //functions
 function refreshStatus() {
