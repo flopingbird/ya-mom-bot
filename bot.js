@@ -9,9 +9,9 @@ client.login(token.token);
 const baseVerbs = verbs.baseVerbs;
 const translatedVerb = verbsTranslated.translatedVerb;
 var usersCount;
-var caseVerb = ['i', 'you', 'u', 'she', 'he', 'it', 'we', 'they', 'them'];
-var caseYaMomIs = ['i\'m', 'im', 'we\'re', 'were', 'its', 'it\'s', 'hes', 'shes', 'he\'s', 'she\'s', 'your', 'ur', 'youre', 'you\'re'];
-var caseYaMom = ['i', 'it', 'he', 'she'];
+const caseVerb = ['i', 'you', 'u', 'she', 'he', 'it', 'we', 'they', 'them'];
+const caseYaMomIs = ['i\'m', 'im', 'we\'re', 'were', 'its', 'it\'s', 'hes', 'shes', 'he\'s', 'she\'s', 'your', 'ur', 'youre', 'you\'re'];
+const caseYaMom = ['i', 'it', 'he', 'she'];
 
 client.on('ready', async () => {
 	console.log('bot on or somethign like that');
@@ -32,11 +32,9 @@ client.on('message', async (message) => {
 	var verbNum;
 	var correctVerbNum = -1;
 	findVerb(args[1]);
-	console.log(correctVerbNum);
 	//WHERE THE MAGIC HAPPENS (choses what case to use) ======================================================================================================================================
 	if (!(correctVerbNum == -1)) { //checks to see if it needs to use gramar 
 		if (caseVerb.includes(args[0].toLowerCase())) {
-			console.log('ok this isnt funny anoymore');
 			message.channel.send(`ya mom ${translatedVerb[correctVerbNum]} ${args.slice(2).join(' ')}`);
 		}
 	} else {
