@@ -128,7 +128,7 @@ client.on("guildCreate", guild => {
 
 function refreshStatus() {
 	usersCount = client.guilds.cache.reduce((a, g) => a + g.memberCount, 0);
-	client.user.setActivity(`doin ${client.guilds.cache.array().length} moms with ${usersCount} people watching!`); 
+	client.user.setActivity(`!yamombot help | doin ${client.guilds.cache.array().length} moms with ${usersCount} people watching!`); 
 }
 
 function getRandomInt(max) { //random number easiest way i found
