@@ -39,7 +39,7 @@ client.on('ready', async () => {
 
 //messages =====
 client.on('message', async (message) => {
-	
+	if (message.channel.type === 'dm') return;
 	if (!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
 	//comands ======
 	if (message.content === "!yamombot help") {
