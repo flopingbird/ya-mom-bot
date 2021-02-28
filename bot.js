@@ -28,6 +28,7 @@ client.on('ready', async () => {
 //messages =====
 client.on('message', async (message) => {
 	if (message.channel.type === 'dm') return;
+	if (!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
 
 	const args = message.content.trim().split(/ +/g);
 	//check if they contain trigger word so it doesnt waste time processing looking for verb if it doesnt even matter (hopefully i explained that well)
