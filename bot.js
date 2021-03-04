@@ -8,12 +8,16 @@ const verbsTranslated = require('./verbsTranslated.json');
 client.login(token.token);
 const baseVerbs = verbs.baseVerbs;
 const translatedVerb = verbsTranslated.translatedVerb;
-var usersCount;
 const caseVerb = ['i', 'you', 'u', 'she', 'he', 'it', 'we', 'they', 'them'];
 const caseYaMomIs = ['i\'m', 'im', 'we\'re', 'were', 'its', 'it\'s', 'hes', 'shes', 'he\'s', 'she\'s', 'your', 'ur', 'youre', 'you\'re'];
 const caseYaMom = ['i', 'it', 'he', 'she'];
 
-
+//top.gg stuff
+const AutoPoster = require('topgg-autoposter')
+const ap = AutoPoster('token', client)
+ap.on('posted', () => {
+	console.log('updated')
+})
 
 //================================================================================================================================================================================
 
@@ -21,14 +25,13 @@ client.on('ready', async () => {
 	console.log('bot on or somethign like that');
 	//status funny
 	refreshStatus();
-	console.log(`doin ${client.guilds.cache.array().length} moms with ${usersCount} people watching!`);
+	console.log("bot on")
 });
 
 
 //messages =====
 client.on('message', async (message) => {
 	if (message.channel.type === 'dm') return;
-	if (!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
 
 	const args = message.content.trim().split(/ +/g);
 	//check if they contain trigger word so it doesnt waste time processing looking for verb if it doesnt even matter (hopefully i explained that well)
@@ -56,7 +59,6 @@ client.on('message', async (message) => {
 	}
 	if (caseYaMomIs.includes(args[0].toLowerCase())){
 		message.channel.send(`ya mom is ${args.slice(1).join(' ')}`);
-		refreshStatus(); //only here because I dont want it constantly being refreshed nor do i want to set a timer.
 		return;
 	}
 	if (caseYaMom.includes(args[0].toLowerCase())){
@@ -79,8 +81,16 @@ client.on('message', async (message) => {
 
 });
 
+client.on("guildCreate", async (guild) => {//when the bot joins a guild
+	refreshStatus();
+});
+
+client.on("guildDelete", (guild) => { //when the bot joins a guild
+	refreshStatus();
+});
+
 //functions
-function refreshStatus() {
-	usersCount = client.guilds.cache.reduce((a, g) => a + g.memberCount, 0);
-	client.user.setActivity(`never adding toggles | doin ${client.guilds.cache.array().length} moms with ${usersCount} people watching!`);
+async function refreshStatus() {
+	let usersCount = await client.guilds.cache.reduce((a, g) => a + g.memberCount, 0);
+	client.user.setActivity(`never adding toggles | doin ${client.guilds.cache.size} moms with ${usersCount} people watching!`);
 }
