@@ -14,7 +14,7 @@ const caseYaMom = ['i', 'it', 'he', 'she'];
 
 //top.gg stuff
 const AutoPoster = require('topgg-autoposter')
-const ap = AutoPoster('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0MzExMDQ5NTk5MjgwNzQ5NSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjE0ODk5NzUyfQ.NjmjG6_s1ffa8omCeav9JuoTYwYSVFhUGuLI9R89EBQ', client)
+const ap = AutoPoster('token', client)
 ap.on('posted', () => {
 	console.log('updated')
 })
