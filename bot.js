@@ -14,7 +14,7 @@ const caseYaMom = ['i', 'it', 'he', 'she'];
 
 //top.gg stuff
 const AutoPoster = require('topgg-autoposter')
-const ap = AutoPoster('token', client)
+const ap = AutoPoster('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0MzExMDQ5NTk5MjgwNzQ5NSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjE0ODk5NzUyfQ.NjmjG6_s1ffa8omCeav9JuoTYwYSVFhUGuLI9R89EBQ', client)
 ap.on('posted', () => {
 	console.log('updated')
 })
@@ -32,6 +32,7 @@ client.on('ready', async () => {
 //messages =====
 client.on('message', async (message) => {
 	if (message.channel.type === 'dm') return;
+	if (!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
 
 	const args = message.content.trim().split(/ +/g);
 	//check if they contain trigger word so it doesnt waste time processing looking for verb if it doesnt even matter (hopefully i explained that well)
@@ -90,7 +91,7 @@ client.on("guildDelete", (guild) => { //when the bot joins a guild
 });
 
 //functions
-async function refreshStatus() {
-	let usersCount = await client.guilds.cache.reduce((a, g) => a + g.memberCount, 0);
+function refreshStatus() {
+	let usersCount = client.guilds.cache.reduce((a, g) => a + g.memberCount, 0);
 	client.user.setActivity(`never adding toggles | doin ${client.guilds.cache.size} moms with ${usersCount} people watching!`);
 }
