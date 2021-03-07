@@ -93,5 +93,5 @@ client.on("guildDelete", (guild) => { //when the bot joins a guild
 //functions
 function refreshStatus() {
 	let usersCount = client.guilds.cache.reduce((a, g) => a + g.memberCount, 0);
-	client.user.setActivity(`never adding toggles | doin ${client.guilds.cache.size} moms with ${usersCount} people watching!`);
+	client.user.setActivity("family guy funny moments #42 | while doing ${client.guilds.cache.size} moms with ${usersCount} people watching!", { type: "WATCHING"})
 }
