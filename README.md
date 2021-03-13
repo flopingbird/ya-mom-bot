@@ -1,37 +1,8 @@
 <html><head>
 	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
   <title>yamombot</title>
   
-  <style>
-    .markdown-body {
-      box-sizing: border-box;
-      min-width: 200px;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 45px;
-    }
-
-    @media (max-width: 767px) {
-      .markdown-body {
-        padding: 15px;
-      }
-    }
-  body,td,th {
-    color: #FFFFFF;
-    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-}
-body {
-    background-color: #131212;
-}
-  a:link {
-    color: #3C4FE7;
-}
-a:visited {
-    color: #3C4FE7;
-}
-  </style>
+ 
 </head>
 
 <body text="#FFFFFF" link="#3C4FE7" vlink="#3C4FE7" alink="#3C4FE7">
