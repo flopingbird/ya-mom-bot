@@ -1,32 +1,81 @@
-<p style='box-sizing: inherit; font-family: Inter, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0px 0px 1em; padding: 0px; font-weight: 400; color: rgb(51, 73, 80); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'><span style="font-family: Verdana, Geneva, sans-serif;">&quot;Ya Mom Bot&quot; is a relatively simple discord bot that &quot;reflects&quot; all messages that start with the trigger words, </span></p>
-<ul>
-    <li><span style='font-family: "Lucida Console", Monaco, monospace;'><span style="box-sizing: inherit; font-style: inherit; font-weight: inherit; color: rgb(209, 72, 65); font-size: 13px;">I</span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;"><span style="box-sizing: inherit; font-style: inherit; font-weight: inherit;">You</span></span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;"><span style="box-sizing: inherit; font-style: inherit; font-weight: inherit;">U</span></span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">She</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">It</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">We</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">They</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">Them</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">I&apos;m</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">Im</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">We&apos;re</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">Were</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">Its</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">It&apos;s</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">Hes</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">Shes</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">He&apos;s</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">She&apos;s</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">Your</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">Ur</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">Youre</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">You&apos;re</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">It</span></span></span></li>
-    <li><span style="color: rgb(209, 72, 65);"><span style="font-family: 'Lucida Console', Monaco, monospace;"><span style="font-size: 13px;">He</span></span></span></li>
-    <li><span style='font-size: 13px; font-family: "Lucida Console", Monaco, monospace; color: rgb(209, 72, 65);'>She</span></li>
-    <li><span style='font-size: 13px; font-family: "Lucida Console", Monaco, monospace; color: rgb(209, 72, 65);'>I am</span></li>
-</ul>
-<p style='box-sizing: inherit; font-family: Inter, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0px 0px 1em; padding: 0px; font-weight: 400; color: rgb(51, 73, 80); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'><span style="font-family: Verdana, Geneva, sans-serif;">I had originally designed this bot to practically be a copy and paste of &quot;Dad Bot&quot; but I have strayed further away from the original and made some modifications that allow for a somewhat &quot;grammar&quot; capable bot. The reason I call it grammar capable is depending on what words you use it will try to reflect the message best as possible, for example, &quot;<strong>I want money</strong>&quot; would be reflected in its proper grammatical form, &quot;<strong>ya mom wants money</strong>&quot;.&nbsp;</span></p>
-<p style='box-sizing: inherit; font-family: Inter, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0px 0px 1em; padding: 0px; font-weight: 400; color: rgb(51, 73, 80); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'><span style="font-family: Verdana, Geneva, sans-serif;">It does this by accessing the top 1000 used verbs in the English language, along with a few other ones I added manually, and switching out their base verb for the proper fitting verb. If there is no base verb used in the second word it will default to a 3 case scenario, it is either &quot;i am&quot;, a possessive (i think that&apos;s what they are called), or a singular &quot;noun&quot;. The bot will act respectively to each case.</span></p>
-<p style='box-sizing: inherit; font-family: Inter, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; font-weight: 400; color: rgb(51, 73, 80); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;  text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'><span style="font-family: Verdana, Geneva, sans-serif;">There is lots and lots of room to improve, I am in no way qualified in javascript nor gramar. And as a side note I do not have plans for adding any toggle system to the bot, I know this is a highly requested feature but I&apos;m honestly just too dumb to do anything database/json wise, however if the bot does reach 300+ servers I&apos;ll try my hardest.</span></p>
+<html><head>
+	<script data-ad-client="ca-pub-6173936237129883" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>yamombot</title>
+  
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  body,td,th {
+    color: #FFFFFF;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+body {
+    background-color: #131212;
+}
+  a:link {
+    color: #3C4FE7;
+}
+a:visited {
+    color: #3C4FE7;
+}
+  </style>
+</head>
+
+<body text="#FFFFFF" link="#3C4FE7" vlink="#3C4FE7" alink="#3C4FE7">
+<article class="markdown-body" id="markdown">
+
+	  <h1 id="yamombot.png"><img src="https://i.imgur.com/kRhG9jh.png" alt="le funny trololololol face" width="128" height="128"> <a href="https://discord.com/oauth2/authorize?client_id=743110495992807495&scope=bot&permissions=0">Install</a> ya mom bot today!    </h1>
+    <p>ya mom bot is the joke that went too far, <a href="https://discord.com/oauth2/authorize?client_id=743110495992807495&scope=bot&permissions=0">install</a> it today!</p>
+    <p> <a href="https://discord.com/oauth2/authorize?client_id=743110495992807495&scope=bot&permissions=0">
+    <img src="https://top.gg/api/widget/743110495992807495.svg" alt="ya mom bot" />
+         </a> </p>
+    <p><a href="https://github.com/flopingbird/ya-mom-bot.git">Source code</a> and <a href="https://top.gg/bot/743110495992807495">top.gg</a></p>
+  <h2 id="features">Features</h2>
+    <ul>
+      <li>Respond to messages that contain the trigger words</li>
+      <li>Gramatically correct the second word in the response to be non-reflexive</li>
+      <li>Tear servers apart.</li>
+      <li>Be funny!</li>
+    </ul>
+  <h2 id="faq">FAQ</h2>
+  <ul>
+    <li id="faq-prefix">Are you planning to add a toggle feature?
+      <ul>
+        <li>I lack alot of skill in javascript, literally the main reason I learned it was to make this &quot;amazing&quot; bot, but I'll <strong>consider </strong>adding a toggle feature of some sorts once it reaches 300 servers</li>
+      </ul>
+    </li>
+    <li>I found a bug/gramatical error or I want to suggest something.
+      <ul>
+        <li>Thank you for your concern for this bot, you can join the support server <a href="https://discord.gg/F9Mqtndkrp">here</a>! Or send an email to <a href="mailto:support@yamombot.info">support@yamombot.info</a></li>
+      </ul>
+    </li>
+    <li>Why are the ads on this website?</li>
+    <ul>
+      <li>Listen guy I need to break even somehow to run this bot<br>
+      </li>
+    </ul>
+  </ul>
+</article>
+
+
+
+
+  <style id="stylus-1" type="text/css" class="stylus">
+  .r-1qd0xha {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif
+}
+  </style>
+</body></html>
