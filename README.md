@@ -36,13 +36,6 @@ a:visited {
 
 <body text="#FFFFFF" link="#3C4FE7" vlink="#3C4FE7" alink="#3C4FE7">
 <article class="markdown-body" id="markdown">
-
-	  <h1 id="yamombot.png"><img src="https://i.imgur.com/kRhG9jh.png" alt="le funny trololololol face" width="128" height="128"> <a href="https://discord.com/oauth2/authorize?client_id=743110495992807495&scope=bot&permissions=0">Install</a> ya mom bot today!    </h1>
-    <p>ya mom bot is the joke that went too far, <a href="https://discord.com/oauth2/authorize?client_id=743110495992807495&scope=bot&permissions=0">install</a> it today!</p>
-    <p> <a href="https://discord.com/oauth2/authorize?client_id=743110495992807495&scope=bot&permissions=0">
-    <img src="https://top.gg/api/widget/743110495992807495.svg" alt="ya mom bot" />
-         </a> </p>
-    <p><a href="https://github.com/flopingbird/ya-mom-bot.git">Source code</a> and <a href="https://top.gg/bot/743110495992807495">top.gg</a></p>
   <h2 id="features">Features</h2>
     <ul>
       <li>Respond to messages that contain the trigger words</li>
