@@ -1,6 +1,6 @@
 <html><head>
 	
-  <title>yamombot</title>
+
   
  
 </head>
