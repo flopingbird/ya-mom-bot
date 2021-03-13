@@ -37,9 +37,5 @@
 
 
 
-  <style id="stylus-1" type="text/css" class="stylus">
-  .r-1qd0xha {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif
-}
-  </style>
+ 
 </body></html>
