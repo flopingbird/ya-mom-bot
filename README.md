@@ -23,7 +23,7 @@
     </li>
     <li>I found a bug/gramatical error or I want to suggest something.
       <ul>
-        <li>Thank you for your concern for this bot, you can join the support server <a href="https://discord.gg/F9Mqtndkrp">here</a>! Or send an email to <a href="mailto:support@yamombot.info">support@yamombot.info</a></li>
+        <li>Thank you for your concern for this bot, you can join the support server <a href="https://discord.gg/F9Mqtndkrp">here</a>! Or send an email to <a href="mailto:yamombot@gmail.com">yamombot@gmail.com</a></li>
       </ul>
     </li>
     <li>Why are the ads on this website?</li>
