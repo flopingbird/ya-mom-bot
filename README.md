@@ -1,6 +1,6 @@
 <html><head>
 	
-
+<h>v1.2.2</h> fixed help command & JSON organization
   
  
 </head>
