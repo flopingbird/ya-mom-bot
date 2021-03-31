@@ -1,20 +1,21 @@
 //declare constants and other stuff like token
 const Discord = require('discord.js');
+const AutoPoster = require('topgg-autoposter');
 const client = new Discord.Client();
-client.disabledMembers = new Map();
-const token = require('./token.json');
+//getting and using the tokens
+const tokens = require('./tokens.json')
+client.login(tokens.token);
+//verbs moment
 const verbs = require('./verbs.json');
-const verbsTranslated = require('./verbsTranslated.json');
-client.login(token.token);
 const baseVerbs = verbs.baseVerbs;
-const translatedVerb = verbsTranslated.translatedVerb;
+const translatedVerb = verbs.translatedVerb;
+//ya mom bot trigger cases
 const caseVerb = ['i', 'you', 'u', 'she', 'he', 'it', 'we', 'they', 'them'];
 const caseYaMomIs = ['i\'m', 'im', 'we\'re', 'were', 'its', 'it\'s', 'hes', 'shes', 'he\'s', 'she\'s', 'your', 'ur', 'youre', 'you\'re'];
 const caseYaMom = ['i', 'it', 'he', 'she'];
 
 //top.gg stuff
-const AutoPoster = require('topgg-autoposter')
-const ap = AutoPoster('token', client)
+const ap = AutoPoster(tokens.apToken, client);
 ap.on('posted', () => {
 	console.log('updated')
 })
@@ -31,11 +32,11 @@ client.on('ready', async () => {
 
 //messages =====
 client.on('message', async (message) => {
-	if (message.channel.type === 'dm') return;
-	if (!message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
+	if (message.channel.type === 'dm' || message.author.bot || !message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
 	const args = message.content.trim().split(/ +/g);
 		//comands ==========
-	if(args[0] == "<@!743110495992807495>"){
+		console.log(args[0]);
+	if(args[0] == "<@!743110495992807495>" || args[0] == "<@743110495992807495>"){
 		if(args[1] == "help") { //help command
 			message.channel.send("<@743110495992807495> *donate* - sends donation link\n<@743110495992807495> *website* - sends website link\n<@743110495992807495> *FAQ* - displays FAQ\n<@743110495992807495> *server* - displays support server");
 		}//timne to checj through all the possibnle commands !  ! :DDDDD
@@ -74,7 +75,7 @@ client.on('message', async (message) => {
 			message.channel.send(`ya mom is ${args.slice(2).join(' ')}`);
 			return;
 		}
-		if (args[0].toLowerCase() === 'ya' && args[1].includes('mom') && !message.author.bot) {
+		if (args[0].toLowerCase() === 'ya' && args[1].includes('mom')) {
 			message.channel.send('hey kid thats my job');
 			return;
 		}
