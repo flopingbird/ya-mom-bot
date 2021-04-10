@@ -14,6 +14,18 @@ const caseVerb = ['i', 'you', 'u', 'she', 'he', 'it', 'we', 'they', 'them'];
 const caseYaMomIs = ['i\'m', 'im', 'we\'re', 'were', 'its', 'it\'s', 'hes', 'shes', 'he\'s', 'she\'s', 'your', 'ur', 'youre', 'you\'re'];
 const caseYaMom = ['i', 'it', 'he', 'she'];
 
+const embded = new Discord.MessageEmbed() //no embeds? im outta here!
+	.setColor('0x545454') // ok but seriously this is just the fancy help command thingy
+	.setDescription('commands for ya mom bot')
+	.setThumbnail('https://i.imgur.com/IVI3LPn.jpg')
+	.addFields(
+		{ name: 'help', value: 'this command' },
+		{ name: 'donate', value: 'sends donation link' },
+		{ name: 'FAQ', value: 'sends FAQ' },
+		{ name: 'server', value: 'sends invite link for support server' },
+		{ name: 'severcount', value: 'sends amount of servers ya mom bot is in' },
+	)
+	
 //top.gg stuff
 const ap = AutoPoster(tokens.apToken, client);
 ap.on('posted', () => {
@@ -26,7 +38,6 @@ client.on('ready', async () => {
 	console.log('bot on or somethign like that');
 	//status funny
 	refreshStatus();
-	console.log("bot on")
 });
 
 
@@ -35,10 +46,9 @@ client.on('message', async (message) => {
 	if (message.channel.type === 'dm' || message.author.bot || !message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
 	const args = message.content.trim().split(/ +/g);
 		//comands ==========
-		console.log(args[0]);
 	if(args[0] == "<@!743110495992807495>" || args[0] == "<@743110495992807495>"){
 		if(args[1] == "help") { //help command
-			message.channel.send("<@743110495992807495> *donate* - sends donation link\n<@743110495992807495> *website* - sends website link\n<@743110495992807495> *FAQ* - displays FAQ\n<@743110495992807495> *server* - displays support server");
+			message.channel.send(embded);
 		}//timne to checj through all the possibnle commands !  ! :DDDDD
 		else if(args[1] == "donate") {
 			message.channel.send("thank you for considering donating to this ~~horrible~~ great bot!\nhttps://www.patreon.com/yamombot");
@@ -47,7 +57,9 @@ client.on('message', async (message) => {
 		}else if(args[1] == "FAQ") {
 			message.channel.send("no, i am not gonna add a toggle in the next month or two");
 		}else if (args[1] == "server"){
-			message.channel.send("https://discord.gg/F9Mqtndkrp");
+			message.channel.send("https://discord.gg/aZWUDjQCbD");
+		}else if(args[1] == "servercount") {
+			message.channel.send(`im doin ${client.guilds.cache.size} moms!`)
 		}else{
 			message.channel.send("Please enter a valid command argument!");
 		}
@@ -101,6 +113,8 @@ client.on('message', async (message) => {
 
 });
 
+//these are here because im tooooooo lazy to figure out how to make the status not expire and might as well leave codfe that is used for its unintended purposes
+//i could see no negative reprocussions in the future AT ALL
 client.on("guildCreate", async (guild) => {//when the bot joins a guild
 	refreshStatus();
 });
@@ -110,5 +124,5 @@ client.on("guildDelete", (guild) => { //when the bot joins a guild
 
 //functions
 function refreshStatus() {
-	client.user.setActivity(`@yamombot help | doin ${client.guilds.cache.size} moms`, { type: "PLAYING"});
+	client.user.setActivity(`amongus minecraft mod | @ya mom bot help`, { type: "PLAYING"});
 }
