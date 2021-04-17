@@ -1,6 +1,6 @@
 <html><head>
 	
-<h>v1.2.3</h> help command improvement along with new trigger verb
+<h>v1.2.3.1</h> help command improvement along with new trigger verb
   
  
 </head>
