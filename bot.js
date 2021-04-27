@@ -124,5 +124,5 @@ client.on("guildDelete", (guild) => { //when the bot joins a guild
 
 //functions
 function refreshStatus() {
-	client.user.setActivity(`amongus minecraft mod | @ya mom bot help`, { type: "PLAYING"});
+	client.user.setActivity(`with @ya mom bot#7927 (imposter) | @ya mom bot help`, { type: "PLAYING"});
 }
