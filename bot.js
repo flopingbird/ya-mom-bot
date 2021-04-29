@@ -43,9 +43,10 @@ client.on('ready', async () => {
 
 //messages =====
 client.on('message', async (message) => {
-	if (message.channel.type === 'dm' || message.author.bot || !message.channel.permissionsFor(client.user).has("SEND_MESSAGES") || message.length >= 1985) return; //techincally max charcter limit i can take in is 1988
-	const args = message.content.trim().split(/ +/g); //																										but i probs did my math wrong bc im defficent so its just 1985 for margin of error
-		//comands ==========
+	if (message.channel.type === 'dm' || message.author.bot || !message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
+	const args = message.content.trim().split(/ +/g); 
+	if(args.slice(0).join(" ").length >= 1985) return; //BRO I HAVE NO FUCKING CLUE WHY
+	//comands ==========  							I CANT JUST DO message.content.length
 	if(args[0] == "<@!743110495992807495>" || args[0] == "<@743110495992807495>"){
 		if(args[1] == "help") { //help command
 			message.channel.send(embded);
