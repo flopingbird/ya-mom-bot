@@ -65,6 +65,8 @@ client.on('message', async (message) => {
 			case "servercount":
 				message.channel.send(`im doin ${client.guilds.cache.size} moms!`);
 				break;
+			default:
+				message.channel.send("Please enter a valid command argument!");
 		} //that felt wayyyyyyy to similar to writing python, i am going to go take a cold shower now
 	}
 
@@ -114,7 +116,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 			client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 					type: 4,
 					data: {
-						content: embded,
+						embeds: embded
 					}
 				}});
 			break;
@@ -154,5 +156,13 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 					}
 				}})
 			break;
+
+		default:
+			client.api.interactions(interaction.id, interaction.token).callback.post({data: {
+					type: 4,
+					data: {
+						content: `Please enter a valid command argument!`
+					}
+				}})
 	}
 })
