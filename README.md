@@ -1,6 +1,6 @@
 <html><head>
 	
-<h>v1.3</h> crashes, efficiency, and /commands
+<h>v1.3</h> <i>crashes, efficiency, and /commands</i>
   
  
 </head>
