@@ -1,6 +1,6 @@
 <html><head>
 	
-<b>v1.3</b> <i>crashes, efficiency, and /commands</i>
+<b>v1.3.1</b> <i>fixed issue with already "translated" verbs being the first word sending a message that contained "undefined"</i>
   
  
 </head>
