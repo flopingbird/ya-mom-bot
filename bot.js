@@ -77,7 +77,7 @@ client.on('message', async (message) => {
 	const verb = findVerb(args[1]); //bro i legit have no idea what to do beside this
 
 	//WHERE THE MAGIC HAPPENS (choses what case to use) =======================
-	if (!(verb == 'undefined') && caseVerb.includes(args[0].toLowerCase())) { //checks to see if it needs to use gramar
+	if (!(verb == undefined) && caseVerb.includes(args[0].toLowerCase())) { //checks to see if it needs to use gramar
 			message.channel.send(`ya mom ${verb} ${args.slice(2).join(' ')}`);
 	} else {//still not putting cases here, simply beacuse they only get indexed 5 and above (i think dont quote me), ill do it next time maybe
 
@@ -95,7 +95,7 @@ client.on('message', async (message) => {
 		}
 		if (caseYaMom.includes(args[0].toLowerCase())){
 			message.channel.send(`ya mom ${args.slice(1).join(' ')}`);
-		} //should've written else if statements :/ class december me!
+		} //should've written else if statements :/ classic december me!
 	}
 });
 
@@ -116,7 +116,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 			client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 					type: 4,
 					data: {
-						embeds: [embded]
+						embeds: embded
 					}
 				}});
 			break;
@@ -156,13 +156,5 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 					}
 				}})
 			break;
-
-		default:
-			client.api.interactions(interaction.id, interaction.token).callback.post({data: {
-					type: 4,
-					data: {
-						content: `Please enter a valid command argument!`
-					}
-				}})
 	}
 })
