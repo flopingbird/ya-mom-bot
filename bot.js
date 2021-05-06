@@ -46,6 +46,10 @@ client.on('ready', async () => {
 client.on('message', async (message) => {
 	if (message.channel.type === 'dm' || message.author.bot || !message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
 	const args = message.content.trim().split(/ +/g);
+			if (args[0].toLowerCase() === 'ya' && args[1].toLowerCase() === ('mom')) {
+			message.channel.send('hey kid thats my job');
+			return;
+		}
 	if(args.slice(0).join(" ").length >= 1985 || args.length < 2) return; //| BRO I HAVE NO FUCKING CLUE WHY | just realized this looks alot neater with it divided
 	//commands section (i shoudl probally make this a secdons .js or soemthing) | I CANT JUST DO message.content.length |
 	if(args[0] == "<@!743110495992807495>" || args[0] == "<@743110495992807495>"){
@@ -85,10 +89,6 @@ client.on('message', async (message) => {
 			message.channel.send(`ya mom is ${args.slice(2).join(' ')}`);
 			return;
 		}
-		if (args[0].toLowerCase() === 'ya' && args[1].includes('mom')) {
-			message.channel.send('hey kid thats my job');
-			return;
-		}
 		if (caseYaMomIs.includes(args[0].toLowerCase())){
 			message.channel.send(`ya mom is ${args.slice(1).join(' ')}`);
 			return;
@@ -116,7 +116,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 			client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 					type: 4,
 					data: {
-						embeds: [embded]
+						embeds: embded
 					}
 				}});
 			break;
