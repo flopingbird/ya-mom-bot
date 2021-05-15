@@ -37,8 +37,6 @@ ap.on('posted', () => {
 
 client.on('ready', async () => {
 	console.log('bot on or somethign like that');
-	//status funny
-	client.user.setActivity(`with @ya mom bot#7927 (imposter) | @ya mom bot help`, { type: "PLAYING"}); //i am way to proud of myself for putting this here
 });
 
 
