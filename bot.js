@@ -30,25 +30,27 @@ const embded = new Discord.MessageEmbed() //no embeds? im outta here!
 const ap = AutoPoster(tokens.apToken, client);
 ap.on('posted', () => {
 	console.log('updated')
-	client.user.setActivity(`with @ya mom bot#7927 (imposter) | @ya mom bot help`, { type: "PLAYING"}); //i am way to proud of myself for putting this here
+	client.user.setActivity(`walks outside, sees new discord theme, day ruined. | @ya mom bot help`, { type: "PLAYING"}); //i am way to proud of myself for putting this here
 })
 
 //===============================================================
 
 client.on('ready', async () => {
 	console.log('bot on or somethign like that');
+	//status funny
+	client.user.setActivity(`with @ya mom bot#7927 (imposter) | @ya mom bot help`, { type: "PLAYING"}); //i am way to proud of myself for putting this here
 });
 
 
 //messages =====
 client.on('message', async (message) => {
-	if (message.channel.type === 'dm' || message.author.bot || !message.channel.permissionsFor(client.user).has("SEND_MESSAGES")) return;
 	const args = message.content.trim().split(/ +/g);
+	if (message.channel.type === 'dm' || message.author.bot || !message.channel.permissionsFor(client.user).has("SEND_MESSAGES")  || args.length < 2) return;
 			if (args[0].toLowerCase() === 'ya' && args[1].toLowerCase() === ('mom')) {
 			message.channel.send('hey kid thats my job');
 			return;
 		}
-	if(args.slice(0).join(" ").length >= 1985 || args.length < 2) return; //| BRO I HAVE NO FUCKING CLUE WHY | just realized this looks alot neater with it divided
+	if(args.slice(0).join(" ").length >= 1985) return; //| BRO I HAVE NO FUCKING CLUE WHY | just realized this looks alot neater with it divided
 	//commands section (i shoudl probally make this a secdons .js or soemthing) | I CANT JUST DO message.content.length |
 	if(args[0] == "<@!743110495992807495>" || args[0] == "<@743110495992807495>"){
 		switch(args[1].toLowerCase()) { //holy shit i used something that actually makes sense
