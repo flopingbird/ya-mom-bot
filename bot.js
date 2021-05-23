@@ -30,7 +30,7 @@ const embded = new Discord.MessageEmbed() //no embeds? im outta here!
 const ap = AutoPoster(tokens.apToken, client);
 ap.on('posted', () => {
 	console.log('updated')
-	client.user.setActivity(`#GiveBotsCustomStatuses | @ya mom bot help or /help`, { type: "PLAYING"}); //i am way to proud of myself for putting this here
+	client.user.setActivity(`out of town D: | @ya mom bot help or /help`, { type: "PLAYING"}); //i am way to proud of myself for putting this here
 })
 
 //===============================================================
@@ -56,7 +56,7 @@ client.on('message', async (message) => {
 				message.channel.send(embded);
 				break;
 			case "donate":
-				message.channel.send("thank you for considering donating: https://www.patreon.com/yamombot\nCurrent Supporters:/nAlejandro Baraona **$1**");
+				message.channel.send("thank you for considering donating: https://www.patreon.com/yamombot\nCurrent Supporters:\nAlejandro Baraona **$1**");
 				break;
 			case "faq":
 				message.channel.send("no, i am not gonna add a toggle in the next month or two \n what were you expecting");
@@ -123,7 +123,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 			client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 					type: 4,
 					data: {
-						content: 'thank you for considering donating: https://www.patreon.com/yamombot\nCurrent Supporters:/nAlejandro Baraona **$1**'
+						content: 'thank you for considering donating: https://www.patreon.com/yamombot\nCurrent Supporters:\nAlejandro Baraona **$1**'
 					}
 				}})
 			break;
