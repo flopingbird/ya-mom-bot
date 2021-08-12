@@ -222,7 +222,7 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 			client.api.interactions(interaction.id, interaction.token).callback.post({data: {
 					type: 4,
 					data: {
-						content: 'https://yamombot.info'
+						content: 'https://yamombot.info' //may chjange
 					}
 				}})
 			break;
