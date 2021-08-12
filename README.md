@@ -1,6 +1,6 @@
 <html><head>
 	
-<b>v1.3.1</b> <i>fixed issue with already "translated" verbs being the first word sending a message that contained "undefined"</i>
+<b>v2.0.0</b> <i>HAPPY BIRTHDAY! (toggles)</i>
   
  
 </head>
