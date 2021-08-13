@@ -80,8 +80,8 @@ client.on('message', async (message) => {
 				message.channel.send("https://yamombot.info")
 				break;
 			case "setchance":
-				if (args[2].toLowerCase() == "on") args[2] = 100;
-				if (args[2].toLowerCase() == "off") args[2] = 0;
+				if (args[2] == "on") args[2] = 100;
+				if (args[2] == "off") args[2] = 0;
 				if (!message.member.hasPermission("ADMINISTRATOR")) {
 					message.channel.send("You dont have proper permissions!");
 					break;
