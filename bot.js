@@ -26,6 +26,7 @@ const embded = new Discord.MessageEmbed() //no embeds? im outta here!
 		{ name: 'server', value: 'sends invite link for support server' },
 		{ name: 'severcount', value: 'sends amount of servers ya mom bot is in' },
 		{ name: 'website', value: 'sends website link for ya mom bot'},
+		{ name: 'invite', value: 'sends ya mom bot invite link'},
 		{ name: 'setchance', value: 'sets chance for entire server for ya mom bot to trigger'}
 	)
 	
@@ -78,6 +79,9 @@ client.on('message', async (message) => {
 				break;
 			case "website":
 				message.channel.send("https://yamombot.info")
+				break;
+			case "invite":
+				message.channel.send("https://discord.com/api/oauth2/authorize?client_id=743110495992807495&permissions=0&scope=bot%20applications.commands");
 				break;
 			case "setchance":
 				if (args[2] == "on") args[2] = 100;
@@ -223,6 +227,14 @@ client.ws.on('INTERACTION_CREATE', async interaction => {
 					type: 4,
 					data: {
 						content: 'https://yamombot.info' //may chjange
+					}
+				}})
+			break;
+		case "invite":
+			client.api.interactions(interaction.id, interaction.token).callback.post({data: {
+					type: 4,
+					data: {
+						content: 'https://discord.com/api/oauth2/authorize?client_id=743110495992807495&permissions=0&scope=bot%20applications.commands' //may chjange
 					}
 				}})
 			break;
